@@ -105,7 +105,7 @@ while run:
 		else:
 			green=(0, 255, 0)
 			blue=(0, 0, 128)
-			font=pygame.font.Font("freesandsblod.ttf", 32)
+			font=pygame.font.Font("blod.ttf", 32)
 			text=font.render("Has Ganado", True, green, blue)
 			textrec=text.get_rect()
 			textrec.center=(width // 2, height // 2)
