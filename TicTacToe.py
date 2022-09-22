@@ -212,7 +212,7 @@ class TicTacToe:
             print()
 
 
-class BollGame:
+class TicTacToeGame:
 
     def __init__(self):
         # Inicializamos pygame
@@ -371,7 +371,7 @@ class BollGame:
 
 
 # starting the game
-boll_Game = BollGame()
-boll_Game.startGame()
+ticTacToe_Game = TicTacToeGame()
+ticTacToe_Game.startGame()
 #tic_tac_toe = TicTacToe()
 #tic_tac_toe.start()
