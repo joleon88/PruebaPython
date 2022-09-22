@@ -324,7 +324,7 @@ class TicTacToeGame:
 
 
 
-            # Pinto el fondo de blanco, dibujo la pelota y actualizo la pantalla
+            # Pinto el fondo, dibujo lo que hay en el tablero y actualizo la pantalla
             self.screen.blit(self.tablero, self.tablerorect)
             for i in range(3):
                 for j in range(3):
