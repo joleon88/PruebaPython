@@ -43,6 +43,10 @@ class TicTacToe:
                 if self.hacer_jugadaPC(copia, i, j, player):
                     if self.is_player_winPC(copia, player):
                         return i+1, j+1
+
+        # Intentar coger el centro
+        if board[1][1] == "-":
+            return 2, 2
         #Tratar de jugar en las esquinas
         jugadasGood=[[1,1], [1,3], [3,1], [3,3]]
         jugada=self.elegir_jugada_azar(board, jugadasGood)
@@ -50,10 +54,7 @@ class TicTacToe:
             return jugada
         else:
             return None, None
-        #Intentar coger el centro
-        if board[2][2] == "-":
-            return 2, 2
-        #Jugar a los lados
+        # Jugar a los lados
         lados = [[1, 2], [2, 1], [2, 3], [3, 2]]
         return self.elegir_jugada_azar(board, lados)
 
@@ -283,8 +284,6 @@ class TicTacToeGame:
                 elif (240+1 <= xPos <= 360) and (241 <= yPos <= 360):
                     xPos, yPos = 240, 240
                     row, col = 3, 3
-                print(xPos, yPos)
-                print("Evento solte el clic")
                 # Pinto la X o O y actualizo la pantalla
                 if self.tic_tac_toe.player == "X":
                     self.xrect.update(self.xPlayer.get_rect())
